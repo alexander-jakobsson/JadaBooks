@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    height: 80px;
+    background-color: #000000;
+}
+
+.login {
+    float: right;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+#userName {
+    outline: none;
+    height: 30px;
+    width: 170px;
+    border-radius: 10px;
+    border: 1px;
+}
+
+#password {
+    outline: none;
+    height: 30px;
+    width: 170px;
+    border-radius: 10px;
+    border: 1px;
+}
+
+#loginBtn {
+    outline: none;
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    border: 1px;
+    background-color: #ffffff;
+}
+
+#loginBtn:active {
+    background-color: #c5c5c5;
+}
+
+.navbar li {
+    padding-left: 20px;
+    display: inline-block;
+    float: left;
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #9c9c9c;
+}
+
+.showcase {
+    background-image: url("https://static.pexels.com/photos/33085/knowledge-book-library-glasses.jpg");
+    background-size: cover;
+    height: 300px;
+    background-color: #bebebe;
+    text-align: center;
+}
+
+.showcase h1 {
+    padding-top: 40px;
+    color: #ffffff;
+}
+
+#search {
+    padding-top: 40px;
+}
+
+#searchBar {
+    outline: none;    
+    width: 350px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#button {
+    outline: none;    
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.resultSet {
+    margin: auto;
+    width: 75%;
+    background-color: #dbdbdb;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    min-height: 200px;
+}
+
+#results {
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.box {
+    text-align: center;
+    background-color: #ffffff;
+    width: 30%;
+    box-shadow: 1px 5px 10px #2b2b2b;
+    max-height: 600px;
+    margin-bottom: 30px;
+    padding: 10px;
+    position: relative;
+}
+
+.box h3 {
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.box h5 {
+    padding-top: 7px;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.box img {
+    max-width: 100%;
+    min-width: 50%;
+    height: auto;
+}
+
+.box div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+}
+
+.box button {
+    width: 100px;
+    height: 40px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px;
+    font-size: 15px;
+}
+
+#footer {
+    height: 80px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#footer h3 {
+    float: right;
+    padding-top: 30px;
+    padding-right: 50px;
+}
