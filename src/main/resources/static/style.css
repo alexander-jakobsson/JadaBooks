@@ -140,7 +140,6 @@ padding-top: 300px;
     text-align: center;
     margin: auto;
     width: 75%;
-    background-color: #dbdbdb;
     padding-bottom: 50px;
     padding-top: 50px;
     min-height: 200px;
@@ -221,6 +220,52 @@ padding-top: 300px;
     color: #ffffff;
     border: 1px;
     font-size: 15px;
+}
+
+#readMore {
+    display: none;
+    height: 500px;
+    width: 75%;
+    margin: auto;
+    background-color: #50661E;
+}
+
+.aboutBox {
+    width: 90%;
+    margin: auto;
+}
+
+.aboutBox img {
+    padding-top: 30px;
+    width: 100px;
+    height: auto;
+    float: right;
+}
+
+.aboutBox h3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 35px;
+}
+
+.aboutBox h5 {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+.aboutBox p {
+    font-size: 14px;
+    width: 70%;
+}
+
+.aboutBox button {
+    margin-top: 60px;
+    width: 180px;
+    height: 60px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px;
+    font-size: 20px;
 }
 
 #footer {
