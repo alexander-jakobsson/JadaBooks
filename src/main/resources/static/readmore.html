@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Jada.com | Your book shop Online</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <h3>Jada.com</h3>
+      <!--<ul>
+        <li><a href="#recommended">Recommended</a></li>
+        <li><a href="#featured">Featured</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>-->
+      <div class="login">
+        <form action="/login" method="post">
+          <input type="text" id="userName" name="user" placeholder="Write your username">
+          <input type="password" id="password" name="pw" placeholder="Write your password">
+          <input type="submit" value="Login" id="loginBtn"/>
+        </form>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="showcase">
+        <h1>Search Book</h1>
+        <div id="search">
+          <input type="text" id="searchBar" placeholder="Search for a nice book" autofocus>
+          <button id="button">Search</button>
+        </div>
+      </div>
+
+      <div class="resultSet">
+        <div id="notaMember">
+          <h1>Not a Member yet?</h1>
+          <button>Register Now!</button>
+        </div>
+        <div id="results">
+        </div>
+      </div>
+
+      <div id="footer">
+        <h3>&copy; Grupp 3, 2017</h3>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="code.js"></script>
+    </div>
+  </body>
+</html>

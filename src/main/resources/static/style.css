@@ -73,7 +73,7 @@
 
 .navbar h3 {
     color: #ffffff;
-    font-size: 35px;
+    font-size: 40px;
     float: left;
     padding-top: 15px;
     padding-left: 80px;
@@ -184,7 +184,6 @@
 
 .box img {
     max-width: 100%;
-    min-width: 50%;
     height: auto;
     padding-top: 15px;
 }
@@ -225,7 +224,7 @@
     }
 
     .box img {
-        width: 10%;
-        height: 25%;
+        max-width: 50%;
+        max-height: 35%;
     }
 }
