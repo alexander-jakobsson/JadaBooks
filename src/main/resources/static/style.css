@@ -9,16 +9,19 @@
     width: 100%;
     position: fixed;
     z-index: 999;
+    font-family: 'Oswald', sans-serif;
 }
 
 .body {
     padding-top: 80px;
+    font-family: 'Merriweather', serif;
 }
 
 .login {
     float: right;
     padding-right: 20px;
     padding-top: 20px;
+
 }
 
 #userName {
@@ -29,6 +32,8 @@
     border: 1px;
     padding: 8px;
     -webkit-box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 #password {
@@ -39,6 +44,8 @@
     border: 1px;
     padding: 8px;
     -webkit-box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 #loginBtn {
@@ -47,7 +54,11 @@
     width: 60px;
     border-radius: 10px;
     border: 1px;
-    background-color: #ffffff;
+    color: #fff;
+    background-color: #50661E;
+    font-family: 'Oswald', sans-serif;
+
+
 }
 
 #loginBtn:active {
@@ -68,7 +79,7 @@
 }
 
 .navbar a:hover {
-    color: #9c9c9c;
+    color: #50661E;
 }
 
 .navbar h3 {
@@ -80,10 +91,12 @@
 }
 
 .showcase {
-    background-image: url("https://static.pexels.com/photos/33085/knowledge-book-library-glasses.jpg");
-    background-size: cover;
-    height: 300px;
-    background-color: #bebebe;
+    background-image: url("https://static.pexels.com/photos/5834/nature-grass-leaf-green.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 700px;
+    max-height: 1000px;
+    background-position: center center;
     text-align: center;
 }
 
@@ -93,28 +106,30 @@
 }
 
 #search {
-    padding-top: 40px;
+padding-top: 300px;
 }
 
 #searchBar {
-    outline: none;    
-    width: 350px;
+    margin: 0 auto;
+    width: 400px;
     height: 40px;
     border-radius: 10px;
     border-width: 1px;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
+    opacity: 0.8;
 }
 
 #button {
-    outline: none;    
-    width: 80px;
+    outline: none;
+    padding: 10px;
     height: 40px;
     border-radius: 10px;
     border-width: 0;
-    background-color: #000000;
+    background-color: #50661E;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 18px;
+    opacity: 0.9;
 }
 
 #button:active {
@@ -135,6 +150,8 @@
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 #notaMember button {
@@ -147,6 +164,7 @@
     color: #ffffff;
     border: 0;
     font-size: 16px;
+
 }
 
 #notaMember button:active {
