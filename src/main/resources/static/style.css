@@ -14,14 +14,13 @@
 
 .body {
     padding-top: 80px;
-    font-family: 'Merriweather', serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 .login {
     float: right;
     padding-right: 20px;
-    padding-top: 20px;
-
+    padding-top: 35px;
 }
 
 #userName {
@@ -53,6 +52,7 @@
   padding-left: 10px;
   padding-right: 10px;
     border-radius: 10px;
+    height: 30px;
     border: 0;
     color: #fff;
     background-color: #50661E;
@@ -111,6 +111,7 @@ padding-top: 300px;
 
 #searchBar {
     margin: 0 auto;
+    outline: none;
     width: 400px;
     height: 40px;
     border-radius: 10px;
@@ -225,7 +226,15 @@ padding-top: 300px;
     background-color: #50661E;
     color: #ffffff;
     border: 1px;
-    font-size: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+    
+}
+.box button:active {
+    outline: none; 
+    background-color: #2b2b2b;
 }
 
 #footer {
