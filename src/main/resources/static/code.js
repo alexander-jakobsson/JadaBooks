@@ -14,8 +14,6 @@ function bookSearch() {
     var search = document.getElementById("searchBar").value;
     document.getElementById("results").innerHTML = "";
 
-
-
     $.ajax({
         url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
         dataType: "json",
@@ -46,23 +44,19 @@ function bookSearch() {
                 + "</h3> <h5>" + author
                 + "</h5> <p>" + parag
                 + "</p> <div> <button class=\"readMoreBtn\" id=" + bookID + " onClick=\"reply_click(this.id)\">Read More</button> </div> </div>";
-                console.log(i);
             }
             if (search) {
                 document.getElementById("notaMember").style.display = "none";
             }
-            console.log(search);
         },
 
         type: 'GET'
     })
 }
 
-//document.getElementsByClassName("readMoreBtn").addEventListener("click", reply_click(clicked_id));
-
 function reply_click(clicked_id) {
+    document.getElementById("readMore").style.display = "block";
     document.getElementById("readMore").innerHTML = "";
-    alert(clicked_id);
 
     $.ajax({
         url: "https://www.googleapis.com/books/v1/volumes?q=isbn:" + clicked_id,
@@ -70,19 +64,17 @@ function reply_click(clicked_id) {
 
         success: function(data) {
 
-            readMore.innerHTML = "<p>" + clicked_id + "</p>"
             console.log(data);
-            var image = data.items[0].volumeInfo.imageLinks.smallThumbnail;
-            var title = data.items[0].volumeInfo.title;
-            var author = data.items[0].volumeInfo.authors;
-            var idType = data.items[0].volumeInfo.industryIdentifiers[0].type;
-            var parag = data.items[0].volumeInfo.description;
+            var image = data.items[0].volumeInfo.imageLinks.smallThumbnail || "";
+            var title = data.items[0].volumeInfo.title || "";
+            var author = data.items[0].volumeInfo.authors || "";
+            var parag = data.items[0].volumeInfo.description || "";
 
             readMore.innerHTML += "<div class=\"aboutBox\"> <img src=\"" + image
             + "\" id=\"resultImg\"> <h3>" + title
             + "</h3> <h5>" + author
             + "</h5> <p>" + parag
-            + "</p> </div>";
+            + "</p> <button>Buy the Book</button> <button class=\"aboutHide\">Hide</button> </div>";
 
         },
 
@@ -90,7 +82,13 @@ function reply_click(clicked_id) {
     })
 }
 
+document.getElementsByClassName("aboutHide").addEventListener("click", hideAbout);
+
 document.getElementById("button").addEventListener("click", bookSearch, false); 
+
+function hideAbout() {
+    document.getElementsByClassName("aboutHide").style.display = "none";
+}
 
 function truncate(parag) {
     var maxlength = 200;
