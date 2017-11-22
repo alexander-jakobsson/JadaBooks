@@ -228,6 +228,53 @@ padding-top: 300px;
     font-size: 15px;
 }
 
+#readMore {
+    background-color: #50661E;
+    width: 75%;
+    margin: auto;
+    min-height: 400px;
+}
+
+.aboutBox {
+    padding: 20px;
+}
+
+.aboutBox img {
+    float: right;
+    width: 150px;
+    height: auto;
+}
+
+.aboutBox h3 {
+    font-size: 35px;
+    padding-bottom: 15px;
+}
+
+.aboutBox h5 {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.aboutBox p {
+    font-size: 14px;
+    width: 60%;
+}
+
+.aboutBox button {
+    width: 30%;
+    height: 100px;
+    margin: auto;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 25px;
+    border: 0;
+    outline: none;
+}
+
+.aboutBox button:active {
+    background-color: #202020
+}
+
 #footer {
     height: 80px;
     background-color: #000000;
