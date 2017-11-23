@@ -157,7 +157,7 @@ padding-top: 300px;
 
 }
 
-#notaMember button {
+.regMem {
     outline: none;
     cursor: pointer;
     width: 170px;
@@ -168,8 +168,6 @@ padding-top: 300px;
     border: 0;
     font-size: 16px;
     font-family: 'Oswald', sans-serif;
-    
-
 }
 
 #notaMember button:active {
@@ -282,6 +280,84 @@ padding-top: 300px;
 
 .aboutBox button:active {
     background-color: #202020
+}
+
+.generateMem {
+    width: 65%;
+    margin: auto;
+    padding-top: 100px;
+    color: #000000;
+    height: 570px;
+    background-color: #50661E;
+    
+}
+
+.generateMem h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 65px;    
+}
+
+#regMemBtn {
+    margin-top: 50px;
+    font-family: 'Oswald', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    height: 50px;
+    width: 120px;
+    border-radius: 0px;
+    
+}
+
+.inputFields {
+    margin: auto;
+    padding-top: 20px;
+    width: 30%;
+}
+
+.inputFields p {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;    
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.inputFields input {
+    font-family: 'Oswald', sans-serif;    
+    outline: none;
+    float: right;
+    height: 27px;
+    width: 200px;
+    border-radius: 7px;
+    border: 1px;
+    padding: 8px;
+    -webkit-box-sizing: border-box;
+}
+
+.loginBig {
+    font-family: 'Oswald', sans-serif;    
+    background-color: #50661E;
+    text-align: center;
+    padding-top: 200px;
+    height: 550px;
+}
+
+.loginBig h1 {
+    font-size: 65px;
+}
+
+.loginBig p {
+    padding-bottom: 30px;
+}
+
+.loginbtn {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+.loginbtn:active {
+    background-color: #c5c5c5 !important;
 }
 
 #footer {

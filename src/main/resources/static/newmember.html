@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet">  </head>
+
+  <body>
+    <div class="navbar">
+      <h3><a href="index.html">JADA <img src="../logo.png"></a></h3>
+      <div class="login">
+        <form action="/login" method="post">
+
+          <input type="text" id="userName" name="user" placeholder="Username">
+          <input type="password" id="password" name="pw" placeholder="Password">
+
+          <input type="submit" value="Login" id="loginBtn"/>
+        </form>
+      </div>
+    </div>
+
+      <div class="generateMem">
+        <h1>Sign up now</h1>
+        <div class="inputFields">
+          <form action="regMem" method="post">
+            <p>First Name: <input type="text" name="inputFname" placeholder="Write your First Name" class="FirstName"></p>
+            <p>Last Name: <input type="text" name="inputLname" placeholder="Write your Last Name" class="LastName"></p>
+            <p>Address: <input type="text" name="inputAddress" placeholder="Write your Address" class="address"></p>
+            <p>City: <input type="text" name="inputCity" placeholder="Write your First City" class="city"></p>
+            <p>Email: <input type="text" name="inputEmail" placeholder="Write your E-mail address" class="email"></p>
+            <p>Password: <input type="password" name="inputPass" placeholder="Write your password" class="password"></p>
+            <input type="submit" value="Submit" id="regMemBtn"/>
+          </form>
+        </div>
+      </div>
+
+      <div id="footer">
+        <h3>&copy; Grupp 3, 2017</h3>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="code.js"></script>
+    </div>
+  </body>
+</html>
