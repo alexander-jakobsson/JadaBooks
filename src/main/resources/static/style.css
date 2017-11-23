@@ -242,6 +242,7 @@ padding-top: 300px;
 }
 
 #readMore {
+    display: none;
     background-color: #50661E;
     width: 75%;
     margin: auto;
