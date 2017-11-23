@@ -36,4 +36,15 @@ public class Repository {
         }
         return null;
     }
+
+    public void getBook(String id) {
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement ps = connection.prepareStatement("INSERT INTO DBO.UserPurchase (UserID, BookID) " +
+                     "VALUES (1, ?) ", new String[] {"UserID"})) {
+            ps.setString(1, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

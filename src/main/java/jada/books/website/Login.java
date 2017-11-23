@@ -13,10 +13,10 @@ import java.sql.SQLException;
 
 @Controller
 public class Login {
+    private String currentBookID;
 
     @Autowired
     private Repository repository;
-    private DataSource dataSource;
 
     @PostMapping("/login")
     //String login(@RequestParam String user, @RequestParam String pw) {
@@ -35,6 +35,10 @@ public class Login {
     }
     @GetMapping("/BuyTheBook")
     String getBook(@RequestParam String id) {
+
+
+        repository.getBook(id);
+
         return "BuyTheBook";
     }
 
@@ -43,4 +47,5 @@ public class Login {
         session.invalidate();
         return "redirect:/";
     }
+
 }
