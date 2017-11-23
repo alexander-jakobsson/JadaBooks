@@ -310,16 +310,16 @@ padding-top: 300px;
     font-family: 'Oswald', sans-serif;
     background-color: #000000;
     color: #ffffff;
-    height: 50px;
-    width: 120px;
-    border-radius: 0px;
-    
+    height: 45px;
+    width: 90px;
+    border-radius: 10px;
 }
 
 .inputFields {
     margin: auto;
     padding-top: 20px;
     width: 30%;
+    min-width: 300px;
 }
 
 .inputFields p {

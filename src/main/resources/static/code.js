@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 document.getElementById("button").addEventListener("click", bookSearch, true);
 
 
+=======
+>>>>>>> 440d7d7207bf21d52d26d2682b39fec123b7332e
 document.getElementById("searchBar").onkeypress = function(e) {
     if (!e) {
     e = window.event;
@@ -12,6 +15,10 @@ document.getElementById("searchBar").onkeypress = function(e) {
         bookSearch();
     }
 }
+
+document.getElementById("button").addEventListener("click", bookSearch, false);
+
+document.getElementsByClassName("aboutHide").addEventListener("click", hideAbout);
 
 function bookSearch() {
     var search = document.getElementById("searchBar").value;

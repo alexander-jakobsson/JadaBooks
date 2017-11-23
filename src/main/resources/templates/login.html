@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-    <link rel="stylesheet" href="/style.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet"/>
-    <title>Jada.com | Your book shop Online</title>
-</head>
+    <head>
+        <link rel="stylesheet" href="/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet"/>
+        <title>Jada.com | Your book shop Online</title>
+    </head>
 
-<body>
-<div class="navbar">
-    <h3><a href="index.html">JADA <img src="/logo.png"/></a></h3>
-    <ul>
-        <!--<li><a href="#recommended">Recommended</a></li>
-        <li><a href="#featured">Featured</a></li>
-        <li><a href="#contact">Contact</a></li>-->
-    </ul>
+    <body>
+        <div class="navbar">
+            <h3><a href="index.html">JADA <img src="/logo.png"/></a></h3>
+            <ul>
 
-    <div class="loggedin">
-        <p th:text="'Hej ' + ${user.firstName}"></p>
-    </div>
+            </ul>
 
-</div>
+            <div class="loggedin">
+                <p th:text="'Hej ' + ${user.firstName}"></p>
+            </div>
 
-<div class="showcase">
-    <h1>Search Book</h1>
-    <div id="search">
-        <input type="text" id="searchBar" placeholder="Search for a nice book" autofocus=""/>
-        <button id="button">Search</button>
-    </div>
-</div>
+        </div>
 
-<div class="resultSet">
-    <div id="results">
-    </div>
-</div>
+        <div class="showcase">
+            <h1>Search Book</h1>
+            <div id="search">
+                <input type="text" id="searchBar" placeholder="Search for a nice book" autofocus=""/>
+                <button id="button">Search</button>
+            </div>
+        </div>
 
-<div id="footer">
-    <h3>&copy; Academy 2017</h3>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="code.js"></script>
-</body>
+        <div class="resultSet">
+            <div id="results">
+            </div>
+        </div>
+
+        <div id="readMore">
+
+        </div>
+
+        <div id="footer">
+            <h3>&copy; Academy 2017</h3>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="code.js"></script>
+    </body>
 </html>
