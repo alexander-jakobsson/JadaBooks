@@ -19,18 +19,21 @@ public class Repository {
 
     }
 
-    public boolean loginUser(String username, String pw) {
+    //public Users(String firstName, String lastName, String address, String city, String email, String password) {
+
+
+        public Users loginUser(String username, String pw) {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT Email, Password FROM Users WHERE Email = ? AND Password = ?")) {
+             PreparedStatement ps = conn.prepareStatement("SELECT FirstName, LastName, Address, City, Email, Password FROM Users WHERE Email = ? AND Password = ?")) {
             ps.setString(1, username);
             ps.setString(2, pw);
             try (ResultSet rs = ps.executeQuery()) {
-                if (!rs.next()) return false;
-                else return true;
+                if (!rs.next()) return null;
+                else return new Users(rs.getString("FirstName"), rs.getString("LastName"), rs.getString("Address"), rs.getString("City"), rs.getString("Email"), rs.getString("Password"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return null;
     }
 }
