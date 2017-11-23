@@ -2,7 +2,8 @@
 
 <html xmlns:th="http://www.w3.org/1999/xhtml">
     <head>
-        <link rel="stylesheet" href="/style.css"/>
+        <link rel="stylesheet" href="style.css"/>            
+        <!--<link rel="stylesheet" href="/style.css"/>-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet"/>
         <title>Jada.com | Your book shop Online</title>
     </head>
@@ -13,19 +14,14 @@
 
             <div class="loggedin">
                 <ul>
-                    <li><p>Library</p></li>
                     <li><p th:text="'Hej ' + ${user.firstName}"></p></li>
                 </ul>
             </div>
 
         </div>
 
-        <div class="showcase">
-            <h1>Search Book</h1>
-            <div id="search">
-                <input type="text" id="searchBar" placeholder="Search for a nice book" autofocus=""/>
-                <button id="button">Search</button>
-            </div>
+        <div class="library">
+            <h1>Your Library</h1>
         </div>
 
         <div class="resultSet">

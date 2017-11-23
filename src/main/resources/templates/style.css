@@ -106,6 +106,23 @@
     padding-left: 80px;
 }
 
+.library {
+    background-image: url("https://static.pexels.com/photos/34592/pexels-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    max-height: 1000px;
+    background-position: center center;
+    text-align: center;
+}
+
+.library h1 {
+    padding-top: 200px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 65px;    
+}
+
 .showcase {
     background-image: url("https://static.pexels.com/photos/5834/nature-grass-leaf-green.jpg");
     background-repeat: no-repeat;
