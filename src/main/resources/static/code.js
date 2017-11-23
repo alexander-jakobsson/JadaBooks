@@ -19,7 +19,6 @@ function bookSearch() {
         dataType: "json",
 
         success: function(data) {
-            //Array[data.items.length] arr = new Array[];
 
             for (i = 0; i < data.items.length; i++ ) {
                 var image = data.items[i].volumeInfo.imageLinks.smallThumbnail;
@@ -84,7 +83,7 @@ function reply_click(clicked_id) {
 
 document.getElementsByClassName("aboutHide").addEventListener("click", hideAbout);
 
-document.getElementById("button").addEventListener("click", bookSearch, false); 
+document.getElementById("button").addEventListener("click", bookSearch);
 
 function hideAbout() {
     document.getElementsByClassName("aboutHide").style.display = "none";
