@@ -71,6 +71,18 @@
     background-color: #c5c5c5;
 }
 
+#logoutBtn {
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    height: 30px;
+    border: 0;
+    color: #fff;
+    background-color: #50661E;
+    font-family: 'Oswald', sans-serif;
+}
+
 .navbar li {
     padding-left: 20px;
     display: inline-block;
@@ -390,3 +402,4 @@ padding-top: 300px;
         max-height: 35%;
     }
 }
+

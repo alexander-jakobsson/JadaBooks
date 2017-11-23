@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -35,5 +36,11 @@ public class Login {
     @GetMapping("/BuyTheBook")
     String getBook(@RequestParam String id) {
         return "BuyTheBook";
+    }
+
+    @GetMapping("/logout")
+    String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
     }
 }
