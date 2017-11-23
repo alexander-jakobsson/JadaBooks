@@ -1,3 +1,7 @@
+document.getElementById("button").addEventListener("click", bookSearch, true);
+
+document.getElementsByClassName("aboutHide").addEventListener("click", hideAbout);
+
 document.getElementById("searchBar").onkeypress = function(e) {
     if (!e) {
     e = window.event;
@@ -83,10 +87,8 @@ function reply_click(clicked_id) {
 
 document.getElementsByClassName("aboutHide").addEventListener("click", hideAbout);
 
-document.getElementById("button").addEventListener("click", bookSearch);
-
 function hideAbout() {
-    document.getElementsByClassName("aboutHide").style.display = "none";
+    document.getElementsByClassName("aboutHide").style.display = "add";
 }
 
 function truncate(parag) {
