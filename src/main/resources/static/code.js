@@ -1,6 +1,5 @@
 document.getElementById("button").addEventListener("click", bookSearch, true);
 
-document.getElementsByClassName("aboutHide").addEventListener("click", hideAbout);
 
 document.getElementById("searchBar").onkeypress = function(e) {
     if (!e) {
@@ -72,12 +71,14 @@ function reply_click(clicked_id) {
             var title = data.items[0].volumeInfo.title || "";
             var author = data.items[0].volumeInfo.authors || "";
             var parag = data.items[0].volumeInfo.description || "";
+            var bookID = clicked_id;
 
             readMore.innerHTML += "<div class=\"aboutBox\"> <img src=\"" + image
             + "\" id=\"resultImg\"> <h3>" + title
             + "</h3> <h5>" + author
             + "</h5> <p>" + parag
-            + "</p> <input type=\"submit\" value=\"Buy the book\" id=\"regMemBtn\"/> </div>";
+            + "</p> <input type=\"submit\" value=\"Buy the book\" id=\"regMemBtn\" onclick=\"location.href='/BuyTheBook?id="
+            + bookID + "'\"/> </div>";
 
         },
 
