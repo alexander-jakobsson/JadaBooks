@@ -10,12 +10,12 @@
     <body>
         <div class="navbar">
             <h3><a href="index.html">JADA <img src="/logo.png"/></a></h3>
-            <ul>
-
-            </ul>
 
             <div class="loggedin">
-                <p th:text="'Hej ' + ${user.firstName}"></p>
+                <ul>
+                    <li><p>Account</p></li>
+                    <li><p th:text="'Hej ' + ${user.firstName}"></p></li>
+                </ul>
             </div>
 
         </div>
