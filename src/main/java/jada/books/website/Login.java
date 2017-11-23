@@ -8,18 +8,31 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 @Controller
 public class Login {
 
     @Autowired
     private Repository repository;
+    private DataSource dataSource;
 
     @PostMapping("/login")
-    String login(@RequestParam String user, @RequestParam String pw) {
-        if (repository.loginUser(user, pw)) {
-            return "login";
-        }
-        return "redirect:/";
-    }
+    //String login(@RequestParam String user, @RequestParam String pw) {
+    ModelAndView login(@RequestParam String user, @RequestParam String pw) {
+        Users userObj = repository.loginUser(user, pw);
+        if (userObj != null) {
 
+            // gör anrop till databasen för att få användaren (userObject)
+            // return new ModelAndView("login").addObject("user",userObject); // i html-koden heter userObject bara user
+
+            //return "login";
+            return new ModelAndView("login").addObject("user",userObj);
+        }
+        //return "redirect:/";
+        return new ModelAndView("redirect:/");
+    }
 }
