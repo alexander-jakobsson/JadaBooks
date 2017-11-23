@@ -93,7 +93,7 @@
 .showcase {
     background-image: url("https://static.pexels.com/photos/5834/nature-grass-leaf-green.jpg");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     height: 700px;
     max-height: 1000px;
     background-position: center center;
