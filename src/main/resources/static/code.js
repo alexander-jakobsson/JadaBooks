@@ -15,7 +15,7 @@ function bookSearch() {
     document.getElementById("results").innerHTML = "";
 
     $.ajax({
-        url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
+        url: "https://www.googleapis.com/books/v1/volumes?q=" + search + "&max-results=20",
         dataType: "json",
 
         success: function(data) {
