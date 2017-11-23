@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Oswald" rel="stylesheet"/>
@@ -15,6 +15,10 @@
         <li><a href="#featured">Featured</a></li>
         <li><a href="#contact">Contact</a></li>-->
     </ul>
+
+    <div class="loggedin">
+        <p th:text="'Hej ' + ${user.firstName}"></p>
+    </div>
 
 </div>
 
