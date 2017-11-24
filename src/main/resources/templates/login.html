@@ -13,11 +13,11 @@
 
             <div class="loggedin">
                 <ul>
-                    <li><p th:text="'Hej ' + ${user.firstName}"></p></li>
+
+                    <li><p th:text="'Hello ' + ${user.firstName}"></p></li>
                     <li><form action="/lib" method="get">
                         <input type="submit" value="Library" id="libBtn"/>
                     </form></li>
-                    <li><p th:text="'Hello ' + ${user.firstName}"></p></li>
                     <li><form action="/logout" method="get">
                         <input type="submit" value="Logout" id="logoutBtn"/>
                     </form>
@@ -42,9 +42,6 @@
         <div id="readMore">
         </div>
 
-        <div id="footer">
-            <h3>&copy; Academy 2017</h3>
-        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <script src="code.js"></script>
     </body>
