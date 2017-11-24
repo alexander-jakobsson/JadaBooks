@@ -7,7 +7,9 @@ document.getElementById("searchBar").onkeypress = function(e) {
     if (e.keyCode == '13'){
         // Enter pressed
         bookSearch();
-    } else break;
+    } else { // noinspection JSAnnotator
+        break;
+    }
 }
 
 document.getElementById("button").addEventListener("click", bookSearch, false);
