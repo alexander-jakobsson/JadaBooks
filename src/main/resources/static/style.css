@@ -30,10 +30,17 @@
     color: #ffffff;
 }
 
-#lib {
+#libBtn {
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
     height: 30px;
-    width: 70px;
+    border: 0;
+    color: #fff;
     background-color: #50661E;
+    font-family: 'Oswald', sans-serif;
+    cursor: pointer;
 }
 
 .loggedin a:hover {
@@ -79,6 +86,7 @@
     color: #fff;
     background-color: #50661E;
     font-family: 'Oswald', sans-serif;
+    cursor: pointer;
 }
 
 #loginBtn:active {
@@ -95,6 +103,7 @@
     color: #fff;
     background-color: #50661E;
     font-family: 'Oswald', sans-serif;
+    cursor: pointer;
 }
 
 #logoutBtn:active {
@@ -186,6 +195,7 @@ padding-top: 300px;
     font-size: 16px;
     opacity: 0.9;
     font-family: 'Oswald', sans-serif;
+    cursor: pointer;
     
 }
 
