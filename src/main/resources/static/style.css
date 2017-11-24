@@ -254,17 +254,23 @@ padding-top: 300px;
     margin-bottom: 30px;
     padding: 10px;
     position: relative;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .box h3 {
     padding-top: 10px;
     font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .box h5 {
     padding-top: 7px;
     padding-bottom: 5px;
     font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .box img {
@@ -279,6 +285,8 @@ padding-top: 300px;
     left: 0;
     right: 0;
     height: 70px;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .box button {
@@ -308,6 +316,8 @@ padding-top: 300px;
 
 .aboutBox {
     padding: 20px;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .aboutBox img {
@@ -319,16 +329,22 @@ padding-top: 300px;
 .aboutBox h3 {
     font-size: 35px;
     padding-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .aboutBox h5 {
     font-size: 25px;
     padding-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .aboutBox p {
     font-size: 14px;
     width: 60%;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .aboutBox button {
@@ -340,6 +356,8 @@ padding-top: 300px;
     font-size: 25px;
     border: 0;
     outline: none;
+    font-family: 'Oswald', sans-serif;
+
 }
 
 .aboutBox button:active {
@@ -370,6 +388,7 @@ padding-top: 300px;
     height: 45px;
     width: 90px;
     border-radius: 10px;
+    border-width: 0px;
 }
 
 .inputFields {
