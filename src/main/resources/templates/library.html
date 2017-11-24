@@ -25,6 +25,13 @@
 
         <div class="resultSet">
             <div id="results">
+                <table>
+                    <th:block th:each="book : ${bookid}">
+                        <tr>
+                            <td th:text="${book.bookid}">...</td>
+                        </tr>
+                    </th:block>
+                </table>
             </div>
         </div>
 

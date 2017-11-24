@@ -30,12 +30,18 @@
     color: #ffffff;
 }
 
-.loggedin p:hover {
+#lib {
+    height: 30px;
+    width: 70px;
+    background-color: #50661E;
+}
+
+.loggedin a:hover {
     color: #50661E;
     cursor: pointer;
 }
 
-.loggedin p:active {
+.loggedin a:active {
     color: #2b2b2b;
 }
 

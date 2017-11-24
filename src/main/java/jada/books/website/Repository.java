@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class Repository {
@@ -46,5 +48,21 @@ public class Repository {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<String> getBookIDsForUser(Users userObj) throws SQLException {
+        try (Connection connection = dataSource.getConnection();
+             PreparedStatement ps = connection.prepareStatement("SELECT BookID FROM DBO.UserPurchase WHERE UserID = ?")) {
+                 ps.setInt(1, userObj.getUserID());
+                 ResultSet rs = ps.executeQuery();
+                 List<String> bookIdList = new ArrayList<>();
+                 while (rs.next()) {
+                     bookIdList.add(rs.getString("BookID"));
+                 }
+                 return bookIdList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return new ArrayList<>();
     }
 }

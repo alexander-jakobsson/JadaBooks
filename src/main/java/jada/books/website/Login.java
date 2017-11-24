@@ -7,9 +7,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
+import java.sql.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 @Controller
 public class Login {
@@ -46,6 +48,16 @@ public class Login {
     String logout(HttpSession session) {
         session.invalidate();
         return "redirect:/";
+    }
+
+    @GetMapping("/lib")
+    ModelAndView showLib(HttpSession session) throws SQLException {
+        if (session.getAttribute("currentSession") != null) {
+            Users userObj = (Users) session.getAttribute("currentSession");
+            List<String> bookIdArray = repository.getBookIDsForUser(userObj);
+            return new ModelAndView("library").addObject("books", bookIdArray);
+        }
+        return new ModelAndView("redirect:/");
     }
 
 }
