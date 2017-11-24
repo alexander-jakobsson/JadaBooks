@@ -1,4 +1,3 @@
-
 document.getElementById("searchBar").onkeypress = function(e) {
     if (!e) {
     e = window.event;
@@ -8,7 +7,7 @@ document.getElementById("searchBar").onkeypress = function(e) {
     if (e.keyCode == '13'){
         // Enter pressed
         bookSearch();
-    }
+    } else break;
 }
 
 document.getElementById("button").addEventListener("click", bookSearch, false);

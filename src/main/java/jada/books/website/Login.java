@@ -21,7 +21,6 @@ public class Login {
     private Repository repository;
 
     @PostMapping("/login")
-<<<<<<< HEAD
     //String login(@RequestParam String user, @RequestParam String pw) {
     ModelAndView login(@RequestParam String user, @RequestParam String pw, HttpSession session) {
         Users userObj;
@@ -38,13 +37,6 @@ public class Login {
 
             //return "login";
             return new ModelAndView("login").addObject("user",userObj);
-=======
-    ModelAndView login(@RequestParam String user, @RequestParam String pw) {
-        Users userObj = repository.loginUser(user, pw);
-        if (userObj != null) {
-
-            return new ModelAndView("login").addObject("user", userObj);
->>>>>>> 37f57517defcaf9fbe852aba69fb431a750899a1
         }
         return new ModelAndView("redirect:/");
     }
@@ -70,10 +62,11 @@ public class Login {
 
     @GetMapping("/lib")
     ModelAndView showLib(HttpSession session) throws SQLException {
+
         if (session.getAttribute("currentSession") != null) {
             Users userObj = (Users) session.getAttribute("currentSession");
             List<String> bookIdArray = repository.getBookIDsForUser(userObj);
-            return new ModelAndView("library").addObject("books", bookIdArray);
+            return new ModelAndView("library").addObject("books", bookIdArray).addObject("user", userObj);
         }
         return new ModelAndView("redirect:/");
     }
