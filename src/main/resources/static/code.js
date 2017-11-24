@@ -1,16 +1,15 @@
+document.getElementById("button").addEventListener("click", bookSearch, false);
+
 document.getElementById("searchBar").onkeypress = function(e) {
     if (!e) {
     e = window.event;
     }   
     
     var keyCode = e.keyCode;
-    if (e.keyCode == '13'){
-        // Enter pressed
+    if (keyCode == '13'){ // Enter pressed
         bookSearch();
-    } else break;
+    }
 }
-
-document.getElementById("button").addEventListener("click", bookSearch, false);
 
 document.getElementsByClassName("aboutHide").addEventListener("click", hideAbout);
 
