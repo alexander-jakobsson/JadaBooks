@@ -19,18 +19,12 @@ public class Login {
     private Repository repository;
 
     @PostMapping("/login")
-    //String login(@RequestParam String user, @RequestParam String pw) {
     ModelAndView login(@RequestParam String user, @RequestParam String pw) {
         Users userObj = repository.loginUser(user, pw);
         if (userObj != null) {
 
-            // gör anrop till databasen för att få användaren (userObject)
-            // return new ModelAndView("login").addObject("user",userObject); // i html-koden heter userObject bara user
-
-            //return "login";
-            return new ModelAndView("login").addObject("user",userObj);
+            return new ModelAndView("login").addObject("user", userObj);
         }
-        //return "redirect:/";
         return new ModelAndView("redirect:/");
     }
     @GetMapping("/BuyTheBook")

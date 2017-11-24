@@ -409,15 +409,25 @@ padding-top: 300px;
 }
 
 #footer {
-    height: 80px;
+    height: 20px;
     background-color: #000000;
     color: #ffffff;
+    display: flex;
+}
+#footerinfo {
+    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    flex-flow: column wrap;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-content: center
 }
 
 #footer h3 {
-    float: right;
-    padding-top: 30px;
-    padding-right: 50px;
+    font-family: 'Oswald', sans-serif;
+    align-self: flex-end;
+    
+    
 }
 
 @media (max-width: 900px) {
