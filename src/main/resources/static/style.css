@@ -73,11 +73,25 @@
     color: #fff;
     background-color: #50661E;
     font-family: 'Oswald', sans-serif;
-
-
 }
 
 #loginBtn:active {
+    background-color: #c5c5c5;
+}
+
+#logoutBtn {
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    height: 30px;
+    border: 0;
+    color: #fff;
+    background-color: #50661E;
+    font-family: 'Oswald', sans-serif;
+}
+
+#logoutBtn:active {
     background-color: #c5c5c5;
 }
 
@@ -104,6 +118,23 @@
     float: left;
     padding-top: 7px;
     padding-left: 80px;
+}
+
+.library {
+    background-image: url("https://static.pexels.com/photos/34592/pexels-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    max-height: 1000px;
+    background-position: center center;
+    text-align: center;
+}
+
+.library h1 {
+    padding-top: 200px;
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 65px;    
 }
 
 .showcase {

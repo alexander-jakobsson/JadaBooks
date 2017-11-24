@@ -15,9 +15,12 @@
                 <ul>
                     <li><p>Library</p></li>
                     <li><p th:text="'Hej ' + ${user.firstName}"></p></li>
+                    <li><form action="/logout" method="get">
+                        <input type="submit" value="Logout" id="logoutBtn"/>
+                    </form>
+                    </li>
                 </ul>
             </div>
-
         </div>
 
         <div class="showcase">
@@ -34,7 +37,6 @@
         </div>
 
         <div id="readMore">
-
         </div>
 
         <div id="footer">

@@ -2,12 +2,10 @@ package jada.books.website;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,10 +13,10 @@ import java.sql.SQLException;
 
 @Controller
 public class Login {
+    private String currentBookID;
 
     @Autowired
     private Repository repository;
-    private DataSource dataSource;
 
     @PostMapping("/login")
     //String login(@RequestParam String user, @RequestParam String pw) {
@@ -35,4 +33,19 @@ public class Login {
         //return "redirect:/";
         return new ModelAndView("redirect:/");
     }
+    @GetMapping("/BuyTheBook")
+    String getBook(@RequestParam String id) {
+
+
+        repository.getBook(id);
+
+        return "BuyTheBook";
+    }
+
+    @GetMapping("/logout")
+    String logout(HttpSession session) {
+        session.invalidate();
+        return "redirect:/";
+    }
+
 }
