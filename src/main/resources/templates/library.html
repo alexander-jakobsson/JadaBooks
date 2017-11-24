@@ -8,6 +8,8 @@
     </head>
 
     <body>
+        <script src="lib.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
         <div class="navbar">
             <h3><a href="index.html">JADA <img src="/logo.png"/></a></h3>
 
@@ -32,7 +34,7 @@
                 <table id="entireLib">
                     <th:block th:each="book : ${books}">
                         <tr>
-                            <td><a th:href="'http://books.google.com/books?id=' + ${book}">...</a></td>
+                            <td><a th:id="'https://www.googleapis.com/books/v1/volumes?q=isbn:' + ${book}" th:text="'ISBN: ' + ${book}" class="books">...</a></td>
                         </tr>
                     </th:block>
                 </table>
@@ -42,9 +44,5 @@
         <div id="readMore">
 
         </div>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-        <script src="code.js"></script>
     </body>
 </html>
