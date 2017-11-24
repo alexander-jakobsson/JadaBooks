@@ -78,7 +78,7 @@ function reply_click(clicked_id) {
             + "\" id=\"resultImg\"> <h3>" + title
             + "</h3> <h5>" + author
             + "</h5> <p>" + parag
-            + "</p> <input type=\"submit\" value=\"Buy the book\" id=\"regMemBtn\" onclick=\"location.href='/BuyTheBook?id=" + bookID + "'\"/> </div>";
+            + "</p> <input type=\"submit\" value=\"Add to library\" id=\"regMemBtn\" onclick=\"location.href='/BuyTheBook?id=" + bookID + "'\"/> </div>";
 
         },
 
