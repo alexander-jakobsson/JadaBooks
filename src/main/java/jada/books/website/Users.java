@@ -1,6 +1,7 @@
 package jada.books.website;
 
 public class Users {
+    private int userID;
     private String firstName;
     private String lastName;
     private String address;
@@ -22,6 +23,10 @@ public class Users {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+    }
+
+    public int getUserID() {
+        return userID;
     }
 
     public String getFirstName() {
