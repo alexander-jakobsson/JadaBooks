@@ -26,12 +26,16 @@ public class Repository {
 
         public Users loginUser(String username, String pw) {
         try (Connection conn = dataSource.getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT FirstName, LastName, Address, City, Email, Password FROM Users WHERE Email = ? AND Password = ?")) {
+             PreparedStatement ps = conn.prepareStatement("SELECT UserID, FirstName, LastName, Address, City, Email, Password FROM Users WHERE Email = ? AND Password = ?")) {
             ps.setString(1, username);
             ps.setString(2, pw);
             try (ResultSet rs = ps.executeQuery()) {
                 if (!rs.next()) return null;
-                else return new Users(rs.getString("FirstName"), rs.getString("LastName"), rs.getString("Address"), rs.getString("City"), rs.getString("Email"), rs.getString("Password"));
+                else return new Users(
+                        rs.getInt("UserID"),
+                        rs.getString("FirstName"), rs.getString("LastName"),
+                        rs.getString("Address"), rs.getString("City"),
+                        rs.getString("Email"), rs.getString("Password"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -39,11 +43,13 @@ public class Repository {
         return null;
     }
 
-    public void getBook(String id) {
+    public void getBook(int userid, String id) {
+        System.out.println("userid: " + userid + "id: " + id);
         try (Connection connection = dataSource.getConnection();
-             PreparedStatement ps = connection.prepareStatement("INSERT INTO DBO.UserPurchase (UserID, BookID) " +
-                     "VALUES (1, ?) ", new String[] {"UserID"})) {
-            ps.setString(1, id);
+             PreparedStatement ps = connection.prepareStatement("INSERT INTO dbo.UserPurchase (UserID, BookID) " +
+                     "VALUES (?, ?) ")) {
+            ps.setInt(1, userid);
+            ps.setString(2, id);
             ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
