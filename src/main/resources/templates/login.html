@@ -13,8 +13,9 @@
 
             <div class="loggedin">
                 <ul>
+                    <li><p th:text="'Hej ' + ${user.firstName}"></p></li>
                     <li><form action="/lib" method="get">
-                        <input type="submit" value="Library" id="lib"/>
+                        <input type="submit" value="Library" id="libBtn"/>
                     </form></li>
                     <li><p th:text="'Hello ' + ${user.firstName}"></p></li>
                     <li><form action="/logout" method="get">
